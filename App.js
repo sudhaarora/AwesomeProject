@@ -7,12 +7,17 @@ import {
   SafeAreaView,
   Text,
   Alert,
-  ImageBackground
+  ImageBackground,
+  TouchableOpacity
 } from 'react-native';
 
 const Separator = () => <View style={styles.separator} />;
 const image = {uri: 'https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg'};
-  
+const showAlert = () =>{
+      Alert.alert(
+         'Press Here!'
+      )
+   }
 const App = () => (
   
   <SafeAreaView style={styles.container}>
@@ -73,6 +78,9 @@ const App = () => (
         />
       </View>
     </View>
+    <TouchableOpacity onPress = {showAlert} style = {styles.button}>
+         <Text>Alert</Text>
+      </TouchableOpacity>
   </SafeAreaView>
 );
 
